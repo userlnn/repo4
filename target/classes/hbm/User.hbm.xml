@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<!-- 将类映射到表 :User类的对象存储到cn_user表中-->
+	<class name="cn.tedu.entity.User" table="scott.cn_user2">
+		<!-- id用来映射主键的对应关系 
+		类中的id属性映射到表的cn_user_id列-->
+		<id name="id" column="cn_user_id"></id>
+		<!-- property 用于映射普通属性
+		将类的name属性映射到表中cn_user_name列 -->
+		<property name="name" column="cn_user_name"></property>
+		<property name="password" column="cn_user_password"></property>
+		<property name="token" column="cn_user_token"></property>
+		<property name="nick" column="cn_user_nick"></property>
+	</class>
+</hibernate-mapping>
